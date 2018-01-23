@@ -104,6 +104,9 @@ enum {
   PB1_2,//D62/A15 = D15
   PEND
 };
+    
+// This must be a literal with the same value as PEND
+#define NUM_DIGITAL_PINS 63
 
 enum {
   A_START_AFTER = D46,
@@ -111,6 +114,9 @@ enum {
   A10, A11, A12, A13, A14, A15,
   AEND
 };
+
+// This must be a literal with the same value as AEND-A0
+#define NUM_ANALOG_INPUTS 16
 
 // On-board LED pin number
 #define LED_BUILTIN             PC9

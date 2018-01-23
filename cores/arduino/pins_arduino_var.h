@@ -30,9 +30,12 @@ extern "C" {
 #endif
 
 #define NOT_AN_INTERRUPT            NC // -1
-#define DEND                        PEND
-#define NUM_DIGITAL_PINS            ((uint32_t)DEND)
-#define NUM_ANALOG_INPUTS           ((uint32_t)(AEND-A0))
+#define DEND                        NUM_DIGITAL_PINS
+
+#ifdef __cplusplus
+static_assert(NUM_DIGITAL_PINS==((uint32_t)PEND));
+static_assert(NUM_ANALOG_INPUTS==((uint32_t)(AEND-A0)));
+#endif
 
 // Convert a digital pin number Dxx to a PinName PX_n
 // Note: Analog pin is also a digital pin.
