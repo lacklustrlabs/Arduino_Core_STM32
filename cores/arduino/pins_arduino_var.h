@@ -25,17 +25,16 @@
 // Include board variant
 #include "variant.h"
 
+// Avoid pins number misalignment
+_Static_assert(NUM_DIGITAL_PINS==PEND, "NUM_DIGITAL_PINS and PEND differ!");
+_Static_assert(NUM_ANALOG_INPUTS==(AEND-A0), "NUM_DIGITAL_PINS and (AEND-A0) differ!");
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #define NOT_AN_INTERRUPT            NC // -1
 #define DEND                        NUM_DIGITAL_PINS
-
-#ifdef __cplusplus
-static_assert(NUM_DIGITAL_PINS==((uint32_t)PEND));
-static_assert(NUM_ANALOG_INPUTS==((uint32_t)(AEND-A0)));
-#endif
 
 // Convert a digital pin number Dxx to a PinName PX_n
 // Note: Analog pin is also a digital pin.

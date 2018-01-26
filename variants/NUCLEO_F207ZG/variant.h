@@ -149,7 +149,7 @@ enum {
 };
 
 // This must be a literal with the same value as PEND
-#define NUM_DIGITAL_PINS 96
+#define NUM_DIGITAL_PINS        96
 
 // Enum defining Arduino style alias for analog pin number --> Ax
 enum {
@@ -160,7 +160,7 @@ enum {
 };
 
 // This must be a literal with the same value as AEND-A0
-#define NUM_ANALOG_INPUTS 18
+#define NUM_ANALOG_INPUTS       18
 
 // On-board LED pin number
 #define LED_BUILTIN             PB0

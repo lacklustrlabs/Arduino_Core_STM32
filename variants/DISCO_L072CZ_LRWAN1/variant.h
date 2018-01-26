@@ -74,7 +74,7 @@ enum {
 };
 
 // This must be a literal with the same value as PEND
-#define NUM_DIGITAL_PINS 33
+#define NUM_DIGITAL_PINS        33
 
 enum {
   A_START_AFTER = D25,
@@ -83,7 +83,7 @@ enum {
 };
 
 // This must be a literal with the same value as AEND-A0
-#define NUM_ANALOG_INPUTS 7
+#define NUM_ANALOG_INPUTS       7
 
 // On-board LED pin number
 #define LED_BUILTIN             PA5
