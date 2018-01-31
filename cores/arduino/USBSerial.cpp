@@ -23,8 +23,9 @@
  * ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
  *
  ****************************************************************************/
-
+#if defined(SERIAL_USB)
 #include <chip.h>
+#endif
 
 #if defined(SERIAL_USB) && defined(USBCON)
 #include <USBSerial.h>

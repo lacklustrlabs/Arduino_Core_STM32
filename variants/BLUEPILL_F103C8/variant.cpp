@@ -76,53 +76,6 @@ const PinName digitalPin[] = {
 }
 #endif
 
-/*
- * UART objects
- */
-
-HardwareSerial Serial1(PA_10, PA_9);
-#ifdef ENABLE_SERIAL2
-HardwareSerial Serial2(PA_3, PA_2);
-#endif
-#ifdef ENABLE_SERIAL3
-HardwareSerial Serial3(PB_11, PB_10);
-#endif
-
-#if defined(SERIAL_USB) && defined(USBCON)
-USBSerial Serial;    //available on PA11/PA12
-#endif
-
-void serialEvent1() __attribute__((weak));
-void serialEvent1() { }
-#ifdef ENABLE_SERIAL2
-void serialEvent2() __attribute__((weak));
-void serialEvent2() { }
-#endif
-#ifdef ENABLE_SERIAL3
-void serialEvent3() __attribute__((weak));
-void serialEvent3() { }
-#endif
-
-#if defined(SERIAL_USB) && defined(USBCON)
-void serialEvent() __attribute__((weak));
-void serialEvent() { }
-#endif
-
-void serialEventRun(void)
-{
-  if (Serial1.available()) serialEvent1();
-#ifdef ENABLE_SERIAL2
-  if (Serial2.available()) serialEvent2();
-#endif
-#ifdef ENABLE_SERIAL3
-  if (Serial3.available()) serialEvent3();
-#endif
-
-#if defined(SERIAL_USB) && defined(USBCON)
-  if (Serial.available()) serialEvent();
-#endif
-}
-
 // ----------------------------------------------------------------------------
 
 #ifdef __cplusplus

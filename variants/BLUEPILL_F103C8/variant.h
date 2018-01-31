@@ -22,8 +22,7 @@
 /*----------------------------------------------------------------------------
  *        Headers
  *----------------------------------------------------------------------------*/
-
-#include "Arduino.h"
+#include "PeripheralPins.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -32,8 +31,6 @@ extern "C"{
 /*----------------------------------------------------------------------------
  *        Pins
  *----------------------------------------------------------------------------*/
-#include "PeripheralPins.h"
-
 extern const PinName digitalPin[];
 
 enum {
@@ -86,24 +83,24 @@ enum {
   PEND
 };
 
-enum {
- A_START_AFTER = D34,
- A0,  A1,  A2,  A3,  A4,  A5,  A6,  A7,  A8,  A9,
- AEND
-};
+// This must be a literal with the same value as PEND
+#define NUM_DIGITAL_PINS        45
+// This must be a literal with a value less than or equal to to MAX_ANALOG_INPUTS
+#define NUM_ANALOG_INPUTS       10
+#define NUM_ANALOG_FIRST        35
 
 //ADC resolution is 12bits
-#define ADC_RESOLUTION                12
-#define DACC_RESOLUTION               12
+#define ADC_RESOLUTION          12
+#define DACC_RESOLUTION         12
 
 //PWR resolution
-#define PWM_RESOLUTION                8
-#define PWM_FREQUENCY                 1000
-#define PWM_MAX_DUTY_CYCLE            255
+#define PWM_RESOLUTION          8
+#define PWM_FREQUENCY           1000
+#define PWM_MAX_DUTY_CYCLE      255
 
 //On-board LED pin number
-#define LED_BUILTIN                   32
-#define LED_GREEN                     LED_BUILTIN
+#define LED_BUILTIN             PC13
+#define LED_GREEN               LED_BUILTIN
 
 //SPI definitions
 //define 16 channels. As many channel as digital IOs
@@ -115,17 +112,17 @@ enum {
 //In case SPI CS channel is not used we define a default one
 #define BOARD_SPI_OWN_SS        SPI_CHANNELS_NUM
 
-#define SS                      BOARD_SPI_DEFAULT_SS
-#define SS1                     8
-#define SS2                     9
-#define SS3                     10
-#define MOSI                    7
-#define MISO                    6
-#define SCK                     5
+#define PIN_SPI_SS              PA4
+#define PIN_SPI_SS1             PA8
+#define PIN_SPI_SS2             PA9
+#define PIN_SPI_SS3             PA10
+#define PIN_SPI_MOSI            PA7
+#define PIN_SPI_MISO            PA6
+#define PIN_SPI_SCK             PA5
 
 //I2C Definitions
-#define SDA                     23
-#define SCL                     22
+#define PIN_WIRE_SDA            PB7
+#define PIN_WIRE_SCL            PB6
 
 //Timer Definitions
 //Do not use timer used by PWM pins when possible. See PinMap_PWM.
@@ -138,15 +135,15 @@ enum {
 #define DEBUG_UART              ((USART_TypeDef *) USART1)
 
 // Serial Pin Firmata
-#define PIN_SERIAL_RX           10
-#define PIN_SERIAL_TX           9
-#define PIN_SERIAL1_RX          3
-#define PIN_SERIAL1_TX          2
-#define PIN_SERIAL2_RX          27
-#define PIN_SERIAL2_TX          26
+#define PIN_SERIAL_RX           PA10
+#define PIN_SERIAL_TX           PA9
+#define PIN_SERIAL1_RX          PA3
+#define PIN_SERIAL1_TX          PA2
+#define PIN_SERIAL2_RX          PB11
+#define PIN_SERIAL2_TX          PB10
 
 #if defined(SERIAL_USB) && defined(USBCON)
-#define USB_DISC_PIN 12 //PA12 = USB Plus (+) pin number. That pin is normally pulled up to 3.3v by a 1.5k resistor
+#define USB_DISC_PIN            PA12 //PA12 = USB Plus (+) pin number. That pin is normally pulled up to 3.3v by a 1.5k resistor
 #endif
 
 #ifdef __cplusplus
@@ -157,14 +154,9 @@ enum {
  *----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus
-extern HardwareSerial Serial1;
-extern HardwareSerial Serial2;
-extern HardwareSerial Serial3;
 
 #if defined(SERIAL_USB) && defined(USBCON)
 extern USBSerial Serial;
-#else
-#define Serial Serial1
 #endif
 
 // These serial port names are intended to allow libraries and architecture-neutral

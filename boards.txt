@@ -390,53 +390,54 @@ Other.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.enable_
 
 # BLUEPILL_F103C8 board
 # Support: USB HID, Serial2 (USART2 on PA3, PA2) and Serial3 (USART3 on PB11, PB10)
-Other.menu.board_part_num.BLUEPILL_F103C8=BluePill F103C8
-Other.menu.board_part_num.BLUEPILL_F103C8.node=NODE_F103C8
-Other.menu.board_part_num.BLUEPILL_F103C8.upload.maximum_size=65536
-Other.menu.board_part_num.BLUEPILL_F103C8.upload.maximum_data_size=20480
-Other.menu.board_part_num.BLUEPILL_F103C8.build.mcu=cortex-m3
-Other.menu.board_part_num.BLUEPILL_F103C8.build.f_cpu=72000000L
-Other.menu.board_part_num.BLUEPILL_F103C8.build.board=BLUEPILL_F103C8
-Other.menu.board_part_num.BLUEPILL_F103C8.build.series=STM32F1xx
-Other.menu.board_part_num.BLUEPILL_F103C8.build.product_line=STM32F103xB
-Other.menu.board_part_num.BLUEPILL_F103C8.build.variant=BLUEPILL_F103C8
-Other.menu.board_part_num.BLUEPILL_F103C8.build.cmsis_lib_gcc=arm_cortexM3l_math
+Other.menu.pnum.BLUEPILL_F103C8=BluePill F103C8
+Other.menu.pnum.BLUEPILL_F103C8.node=NODE_F103C8
+Other.menu.pnum.BLUEPILL_F103C8.upload.maximum_size=65536
+Other.menu.pnum.BLUEPILL_F103C8.upload.maximum_data_size=20480
+Other.menu.pnum.BLUEPILL_F103C8.build.mcu=cortex-m3
+Other.menu.pnum.BLUEPILL_F103C8.build.f_cpu=72000000L
+Other.menu.pnum.BLUEPILL_F103C8.build.board=BLUEPILL_F103C8
+Other.menu.pnum.BLUEPILL_F103C8.build.series=STM32F1xx
+Other.menu.pnum.BLUEPILL_F103C8.build.product_line=STM32F103xB
+Other.menu.pnum.BLUEPILL_F103C8.build.variant=BLUEPILL_F103C8
+Other.menu.pnum.BLUEPILL_F103C8.build.cmsis_lib_gcc=arm_cortexM3l_math
 
 # MAPLEMINI_F103CB board
 # Support: USB HID, Serial2 (USART2 on PA3, PA2) and Serial3 (USART3 on PB11, PB10)
-Other.menu.board_part_num.MAPLEMINI_F103CB=MapleMini F103CB
-Other.menu.board_part_num.MAPLEMINI_F103CB.node=NODE_F103CB
-Other.menu.board_part_num.MAPLEMINI_F103CB.upload.maximum_size=131072
-Other.menu.board_part_num.MAPLEMINI_F103CB.upload.maximum_data_size=20480
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.mcu=cortex-m3
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.f_cpu=72000000L
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.board=MAPLEMINI_F103CB
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.series=STM32F1xx
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.product_line=STM32F103xB
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.variant=MAPLEMINI_F103CB
-Other.menu.board_part_num.MAPLEMINI_F103CB.build.cmsis_lib_gcc=arm_cortexM3l_math
+Other.menu.pnum.MAPLEMINI_F103CB=MapleMini F103CB
+Other.menu.pnum.MAPLEMINI_F103CB.node=NODE_F103CB
+Other.menu.pnum.MAPLEMINI_F103CB.upload.maximum_size=131072
+Other.menu.pnum.MAPLEMINI_F103CB.upload.maximum_data_size=20480
+Other.menu.pnum.MAPLEMINI_F103CB.build.mcu=cortex-m3
+Other.menu.pnum.MAPLEMINI_F103CB.build.f_cpu=72000000L
+Other.menu.pnum.MAPLEMINI_F103CB.build.board=MAPLEMINI_F103CB
+Other.menu.pnum.MAPLEMINI_F103CB.build.series=STM32F1xx
+Other.menu.pnum.MAPLEMINI_F103CB.build.product_line=STM32F103xB
+Other.menu.pnum.MAPLEMINI_F103CB.build.variant=MAPLEMINI_F103CB
+Other.menu.pnum.MAPLEMINI_F103CB.build.cmsis_lib_gcc=arm_cortexM3l_math
 
 # Upload menu
-Other.menu.upload_method.DFUUploadMethod1=Maple bootloader (original version for Maple boards)
-Other.menu.upload_method.DFUUploadMethod1.upload.protocol=maple_dfu
-Other.menu.upload_method.DFUUploadMethod1.upload.tool=maple_upload
-Other.menu.upload_method.DFUUploadMethod1.build.upload_flags=-DSERIAL_USB -DVECT_TAB_OFFSET=0x5000
-Other.menu.upload_method.DFUUploadMethod1.build.ldscript=bootloader_original.ld
-Other.menu.upload_method.DFUUploadMethod1.upload.usbID=1EAF:0003
-Other.menu.upload_method.DFUUploadMethod1.upload.altID=1
+#Other.menu.upload_method.DFUUploadMethod1=Maple bootloader (original version for Maple boards)
+#Other.menu.upload_method.DFUUploadMethod1.upload.protocol=maple_dfu
+#Other.menu.upload_method.DFUUploadMethod1.upload.tool=maple_upload
+#Other.menu.upload_method.DFUUploadMethod1.build.upload_flags=-DSERIAL_USB -DVECT_TAB_OFFSET=0x5000
+#Other.menu.upload_method.DFUUploadMethod1.build.ldscript=bootloader_original.ld
+#Other.menu.upload_method.DFUUploadMethod1.upload.usbID=1EAF:0003
+#Other.menu.upload_method.DFUUploadMethod1.upload.altID=1
 
-Other.menu.upload_method.DFUUploadMethod=STM32duino bootloader
-Other.menu.upload_method.DFUUploadMethod.upload.protocol=maple_dfu
-Other.menu.upload_method.DFUUploadMethod.upload.tool=maple_upload
-Other.menu.upload_method.DFUUploadMethod.build.upload_flags=-DSERIAL_USB -DVECT_TAB_OFFSET=0x2000
-Other.menu.upload_method.DFUUploadMethod.build.ldscript=bootloader.ld
-Other.menu.upload_method.DFUUploadMethod.upload.usbID=1EAF:0003
-Other.menu.upload_method.DFUUploadMethod.upload.altID=2
+#Other.menu.upload_method.DFUUploadMethod=STM32duino bootloader
+#Other.menu.upload_method.DFUUploadMethod.upload.protocol=maple_dfu
+#Other.menu.upload_method.DFUUploadMethod.upload.tool=maple_upload
+#Other.menu.upload_method.DFUUploadMethod.build.upload_flags=-DSERIAL_USB -DVECT_TAB_OFFSET=0x2000
+#Other.menu.upload_method.DFUUploadMethod.build.ldscript=bootloader.ld
+#Other.menu.upload_method.DFUUploadMethod.upload.usbID=1EAF:0003
+#Other.menu.upload_method.DFUUploadMethod.upload.altID=2
 
 Other.menu.upload_method.STLinkMethod=STLink
 Other.menu.upload_method.STLinkMethod.upload.protocol=STLink
 Other.menu.upload_method.STLinkMethod.upload.tool=stlink_upload
-Other.menu.upload_method.STLinkMethod.build.upload_flags=-DSERIAL_USB
+#Other.menu.upload_method.STLinkMethod.build.upload_flags=-DSERIAL_USB
+Other.menu.upload_method.STLinkMethod.build.upload_flags=
 
 Other.menu.upload_method.serialMethod=Serial
 Other.menu.upload_method.serialMethod.upload.protocol=maple_serial
@@ -483,13 +484,14 @@ Disco.menu.xserial.all.build.xSerial=-DALL_HWSERIAL
 Disco.menu.xserial.third=Enable first third (USART1 to 3 if available)
 Disco.menu.xserial.third.build.xSerial=-DFIRST_THIRD_HWSERIAL
 
-Other.menu.Other_serial.enable_Serial=None
-Other.menu.Other_serial.enable_SerialAll=All
-Other.menu.Other_serial.enable_SerialAll.build.enable_Serialx=-DENABLE_SERIAL2 -DENABLE_SERIAL3
-Other.menu.Other_serial.enable_Serial2=Serial2 (if available)
-Other.menu.Other_serial.enable_Serial2.build.enable_Serialx=-DENABLE_SERIAL2
-Other.menu.Other_serial.enable_Serial3=Serial3 (if available)
-Other.menu.Other_serial.enable_Serial3.build.enable_Serialx=-DENABLE_SERIAL3
+Other.menu.xserial.enable_Serial2=Serial2 (if available)
+Other.menu.xserial.enable_Serial2.build.enable_Serialx=-DSERIAL_UART_INSTANCE=2
+Other.menu.xserial.enable_Serial3=Serial3 (if available)
+Other.menu.xserial.enable_Serial3.build.enable_Serialx=-DSERIAL_UART_INSTANCE=3
+Other.menu.xserial.enable_SerialAll=All
+Other.menu.xserial.enable_SerialAll.build.enable_Serialx=-DSERIAL_UART_INSTANCE=2 -DENABLE_SERIAL3
+Other.menu.xserial.enable_SerialNone=None
+Other.menu.xserial.enable_SerialNone.build.enable_Serialx=
 
 # USB connectivity
 Nucleo_144.menu.usb.none=None
@@ -628,6 +630,35 @@ Disco.menu.opt.o3lto.build.flags.ldspecs=-flto
 Disco.menu.opt.ogstd=Debug (-g)
 Disco.menu.opt.ogstd.build.flags.optimize=-g -Og
 Disco.menu.opt.ogstd.build.flags.ldspecs=
+
+Other.menu.opt.osstd=Smallest (-Os default)
+Other.menu.opt.osstd.build.flags.optimize=-Os
+Other.menu.opt.osstd.build.flags.ldspecs=
+Other.menu.opt.oslto=Smallest (-Os) with LTO
+Other.menu.opt.oslto.build.flags.optimize=-Os -flto
+Other.menu.opt.oslto.build.flags.ldspecs=-flto
+Other.menu.opt.o1std=Fast (-O1)
+Other.menu.opt.o1std.build.flags.optimize=-O1
+Other.menu.opt.o1std.build.flags.ldspecs=
+Other.menu.opt.o1lto=Fast (-O1) with LTO
+Other.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+Other.menu.opt.o1lto.build.flags.ldspecs=-flto
+Other.menu.opt.o2std=Faster (-O2)
+Other.menu.opt.o2std.build.flags.optimize=-O2
+Other.menu.opt.o2std.build.flags.ldspecs=
+Other.menu.opt.o2lto=Faster (-O2) with LTO
+Other.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+Other.menu.opt.o2lto.build.flags.ldspecs=-flto
+Other.menu.opt.o3std=Fastest (-O3)
+Other.menu.opt.o3std.build.flags.optimize=-O3
+Other.menu.opt.o3std.build.flags.ldspecs=
+Other.menu.opt.o3lto=Fastest (-O3) with LTO
+Other.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+Other.menu.opt.o3lto.build.flags.ldspecs=-flto
+Other.menu.opt.ogstd=Debug (-g)
+Other.menu.opt.ogstd.build.flags.optimize=-g -Og
+Other.menu.opt.ogstd.build.flags.ldspecs=
+
 Nucleo_144.menu.USB_interface.enable_USB=None
 Nucleo_144.menu.USB_interface.enable_HID=HID keyboard and mouse support (if available)
 Nucleo_144.menu.USB_interface.enable_HID.build.enable_usb={build.usb_flags} -DUSBD_USE_HID_COMPOSITE

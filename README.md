@@ -57,8 +57,8 @@ For advanced user, you can use the repository: see the [Using git repository](ht
 
 ### Next release
   * STM32F1
-    * BluePill F103C8 (on going)
-    * MapleMini F103CB (on going)
+    * BluePill F103C8 (on going, Blinky and Serial tested with STLink and Serial2)
+    * MapleMini F103CB (on going, Blinky,I2C and Serial tested with STLink and Serial2)
 
 ## Troubleshooting
 
